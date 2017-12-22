@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    v (0.0.1)
+    morf (0.0.1)
 
 GEM
   remote: https://rubygems.org/
@@ -29,9 +29,9 @@ PLATFORMS
 DEPENDENCIES
   activesupport (~> 1.3)
   bundler (~> 1.3)
+  morf!
   rake
   rspec
-  v!
 
 BUNDLED WITH
    1.15.4

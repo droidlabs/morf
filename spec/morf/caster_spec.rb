@@ -134,7 +134,7 @@ describe Morf::Caster do
       input_hash = {
         contact: {
           name: {},
-          age: 22,
+          age: 'aaa',
           weight: 65.5,
           birthday: Date.today,
           last_logged_in: DateTime.now,
@@ -158,7 +158,7 @@ describe Morf::Caster do
 
       expect do
         ContactCaster.cast(input_hash)
-      end.to raise_error(Morf::Errors::CastingError, "contact[name] should be a string")
+      end.to raise_error(Morf::Errors::CastingError, "contact[age] is invalid integer")
     end
 
     it "should raise error if some attribute wasn't given" do
@@ -376,9 +376,9 @@ describe Morf::Caster do
       expect do
         HomeCaster.cast(
           city: nil,
-          zip: nil
+          zip: 'nil'
         )
-      end.to raise_error(Morf::Errors::CastingError, "city should be a string")
+      end.to raise_error(Morf::Errors::CastingError, "zip is invalid integer")
     end
   end
 end
