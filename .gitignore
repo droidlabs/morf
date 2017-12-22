@@ -1,0 +1,6 @@
+vendor/
+tags
+.bundle
+.DS_Store
+tmp/
+pkg
