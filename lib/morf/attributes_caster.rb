@@ -6,7 +6,7 @@ class Morf::AttributesCaster
     @options            = options
   end
 
-  def cast(input_hash, options = {})
+  def cast(input_hash, params = {})
     casted_hash = {}
 
     hash_keys = get_keys(input_hash)
